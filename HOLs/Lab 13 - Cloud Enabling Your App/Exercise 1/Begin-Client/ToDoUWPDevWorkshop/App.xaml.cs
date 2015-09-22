@@ -27,7 +27,7 @@ namespace ToDoUWPDevWorkshop
         // Uncomment this code for configuring the MobileServiceClient to communicate with the Azure Mobile Service and
         // Azure Gateway using the application key. You're all set to start working with your Mobile Service!
         //public static MobileServiceClient MobileService = new MobileServiceClient(
-        //    "https://todouwpdevworkshop.azurewebsites.net",
+        //    "https://uwphols.azurewebsites.net",
         //    "",
         //    ""
         //);
