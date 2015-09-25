@@ -4,17 +4,17 @@ using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.OData;
 using Microsoft.Azure.Mobile.Server;
-using ToDoUWPDevWorkshopService.DataObjects;
-using ToDoUWPDevWorkshopService.Models;
+using UWPHolsService.DataObjects;
+using UWPHolsService.Models;
 
-namespace ToDoUWPDevWorkshopService.Controllers
+namespace UWPHolsService.Controllers
 {
     public class TodoItemController : TableController<TodoItem>
     {
         protected override void Initialize(HttpControllerContext controllerContext)
         {
             base.Initialize(controllerContext);
-            ToDoUWPDevWorkshopContext context = new ToDoUWPDevWorkshopContext();
+            UWPHolsContext context = new UWPHolsContext();
             DomainManager = new EntityDomainManager<TodoItem>(context, Request);
         }
 

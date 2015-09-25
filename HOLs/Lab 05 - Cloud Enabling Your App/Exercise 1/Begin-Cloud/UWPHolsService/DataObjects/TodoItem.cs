@@ -1,6 +1,6 @@
 ﻿using Microsoft.Azure.Mobile.Server;
 
-namespace ToDoUWPDevWorkshopService.DataObjects
+namespace UWPHolsService.DataObjects
 {
     public class TodoItem : EntityData
     {

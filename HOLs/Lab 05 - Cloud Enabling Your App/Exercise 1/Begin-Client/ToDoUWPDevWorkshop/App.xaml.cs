@@ -35,7 +35,7 @@ namespace ToDoUWPDevWorkshop
         // Use this code for configuring the MobileServiceClient to communicate with your local
         // test project for debugging purposes.
         public static MobileServiceClient MobileService = new MobileServiceClient(
-            "http://localhost:59989"
+            "http://localhost:50781"
         );
 
         /// <summary>
