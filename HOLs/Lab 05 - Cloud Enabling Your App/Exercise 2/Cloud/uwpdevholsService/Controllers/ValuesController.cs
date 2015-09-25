@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
+using System.Web.Http.Tracing;
+using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.Config;
 
-namespace ToDoUWPDevWorkshopService.Controllers
+namespace uwpdevholsService.Controllers
 {
     // Use the MobileAppController attribute for each ApiController you want to use  
     // from your mobile clients 
@@ -14,6 +13,11 @@ namespace ToDoUWPDevWorkshopService.Controllers
         // GET api/values
         public string Get()
         {
+            MobileAppSettingsDictionary settings = this.Configuration.GetMobileAppSettingsProvider().GetMobileAppSettings();
+
+            ITraceWriter traceWriter = this.Configuration.Services.GetTraceWriter();
+            traceWriter.Info("Hello from " + settings.Name);
+
             return "Hello World!";
         }
 

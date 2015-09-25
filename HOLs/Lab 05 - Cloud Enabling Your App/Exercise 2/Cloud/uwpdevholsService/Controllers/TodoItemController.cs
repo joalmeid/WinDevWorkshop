@@ -4,11 +4,11 @@ using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.OData;
 using Microsoft.Azure.Mobile.Server;
-using ToDoUWPDevWorkshopService.DataObjects;
-using ToDoUWPDevWorkshopService.Models;
+using uwpdevholsService.DataObjects;
+using uwpdevholsService.Models;
 using Microsoft.Azure.Mobile.Server.Authentication;
 
-namespace ToDoUWPDevWorkshopService.Controllers
+namespace uwpdevholsService.Controllers
 {
     // Add the [Authorize] attribute to the TodoItemController class. 
     // This requires that all operations against the TodoItem table be made by an authenticated user. 
@@ -19,7 +19,7 @@ namespace ToDoUWPDevWorkshopService.Controllers
         protected override void Initialize(HttpControllerContext controllerContext)
         {
             base.Initialize(controllerContext);
-            ToDoUWPDevWorkshopContext context = new ToDoUWPDevWorkshopContext();
+            uwpdevholsContext context = new uwpdevholsContext();
             DomainManager = new EntityDomainManager<TodoItem>(context, Request);
         }
 
