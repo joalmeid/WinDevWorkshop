@@ -37,7 +37,7 @@ namespace ToDoUWPDevWorkshop
         private async System.Threading.Tasks.Task AuthenticateAsync()
         {
             string message;
-            // This sample uses the Facebook provider.
+            // This sample uses the Azure Active Directory provider.
             var provider = "AAD";
 
             // Use the PasswordVault to securely store and access credentials.

@@ -33,13 +33,13 @@
                 <ColumnDefinition Width="2*" />
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.ColumnSpan="2" >
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="2" >
                 <Button Name="ButtonLogin" Click="ButtonLogin_Click" 
                     Visibility="Visible">Sign in</Button>
             
-                <TextBlock Grid.Row="0" Style="{StaticResource BodyTextBlockStyle}" Text="Enter some text below and click Save to insert a new TodoItem item into your database" TextWrapping="Wrap"/>
-              
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="Enter some text below and click Save to insert a new TodoItem item into your database" TextWrapping="Wrap"/>
             </StackPanel>
+            
             <TextBox Grid.Row="1" Grid.Column="0" Name="TextInput" Text="" />       
             <Button Grid.Row ="1" Grid.Column="1" Name="ButtonSave" Click="ButtonSave_Click" IsEnabled="False" Margin="10, 0, 0, 0">Save</Button>
             <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource BodyTextBlockStyle}" Text="Click refresh below to load the unfinished TodoItems from your database. Use the checkbox to complete and update your TodoItems" TextWrapping="Wrap"/>
